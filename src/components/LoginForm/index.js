@@ -1,4 +1,4 @@
-import Component from 'react'
+import {Component} from 'react'
 
 import './index.css'
 
@@ -48,10 +48,10 @@ class LoginForm extends Component {
     return (
       <>
         <label className="input-label" htmlFor="password">
-          Password
+          PASSWORD
         </label>
         <input
-          type="text"
+          type="password"
           id="password"
           className="password-input-field"
           value={password}
@@ -66,7 +66,7 @@ class LoginForm extends Component {
     return (
       <>
         <label className="input-label" htmlFor="username">
-          username
+          USERNAME
         </label>
         <input
           type="text"
@@ -87,15 +87,26 @@ class LoginForm extends Component {
           className="login-image"
           alt="website login"
         />
-        <form className="form-container" onSubmit={this.onSubmitForm}>
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
-            className="login-logo-img"
-            alt="website logo"
-          />
-          <div className="username-container">{this.renderUserNameField()}</div>
-          <div className="password-container">{this.renderPasswordField()}</div>
-        </form>
+        <div className="card-container">
+          <form className="form-container" onSubmit={this.onSubmitForm}>
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+              className="login-logo-img"
+              alt="website logo"
+            />
+            <div className="username-container">
+              {this.renderUserNameField()}
+            </div>
+            <div className="password-container">
+              {this.renderPasswordField()}
+            </div>
+            <div className="login-button-container">
+              <button type="button" className="login-button">
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     )
   }
