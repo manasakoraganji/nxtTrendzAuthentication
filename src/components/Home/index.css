@@ -1,0 +1,35 @@
+.content-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.h-container {
+  padding: 20vh;
+}
+
+.home-heading {
+  color: #000000;
+  font-family: 'Roboto';
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.home-paragraph {
+  color: #475569;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.home-button {
+  background-color: #0967d2;
+  color: #ffffff;
+  height: 5vh;
+  width: 20vh;
+  border: 2px none;
+}
+
+.home-button:hover {
+  background-color: #db84d5;
+  color: #000000;
+}
