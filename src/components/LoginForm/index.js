@@ -1,4 +1,4 @@
-import Component from 'react'
+import {Component} from 'react'
 
 import './index.css'
 
@@ -51,7 +51,7 @@ class LoginForm extends Component {
           Password
         </label>
         <input
-          type="text"
+          type="password"
           id="password"
           className="password-input-field"
           value={password}
