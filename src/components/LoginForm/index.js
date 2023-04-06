@@ -55,6 +55,7 @@ class LoginForm extends Component {
           id="password"
           className="password-input-field"
           value={password}
+          placeholder="Password"
           onChange={this.onChangePassword}
         />
       </>
@@ -73,6 +74,7 @@ class LoginForm extends Component {
           id="username"
           className="username-input-field"
           value={username}
+          placeholder="Username"
           onChange={this.onChangeUserName}
         />
       </>
@@ -101,9 +103,10 @@ class LoginForm extends Component {
               {this.renderPasswordField()}
             </div>
             <div className="login-button-container">
-              <button type="button" className="login-button">
+              <button type="submit" className="login-button">
                 Login
               </button>
+              <p>{this.onSubmitFailure()}</p>
             </div>
           </form>
         </div>
