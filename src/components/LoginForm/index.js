@@ -3,7 +3,7 @@ import {Component} from 'react'
 import './index.css'
 
 class LoginForm extends Component {
-  state = {username: '', password: ''}
+  state = {username: '', password: '', errorMsg: false}
 
   onSubmitSuccess = () => {
     const {history} = this.props
@@ -11,7 +11,7 @@ class LoginForm extends Component {
   }
 
   onSubmitFailure = () => {
-    console.log("*Username and Password didn't match")
+    this.setState({errorMsg: true})
   }
 
   onSubmitForm = async event => {
@@ -82,6 +82,7 @@ class LoginForm extends Component {
   }
 
   render() {
+    const {errorMsg} = this.state
     return (
       <div className="login-container">
         <img
@@ -106,7 +107,7 @@ class LoginForm extends Component {
               <button type="submit" className="login-button">
                 Login
               </button>
-              <p>{this.onSubmitFailure()}</p>
+                {errorMsg && <p> *Username and Password didn't match </p>}
             </div>
           </form>
         </div>
